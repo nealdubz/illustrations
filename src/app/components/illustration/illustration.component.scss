@@ -1,0 +1,47 @@
+h1.entry-title,
+h1.page-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0;
+    padding-top: 10px;
+    line-height: 1.25em;
+    text-align: center;
+    margin: 0 0 5px;
+    color: #521512;
+}
+
+.downloads {
+    text-align: center;
+}
+.downloads h2 {
+    color: #312928;
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.downloads a {
+    position: relative;
+    color: #312928;
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    border-top: 4px solid #f8cc97;
+    margin-right: 7px;
+}
+
+img{
+    max-width: 100%;
+}

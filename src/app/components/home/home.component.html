@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let book of books | paginate: { itemsPerPage: 20, currentPage: p } ">
+            <div class="card mb-3">
+                <a href="title/{{ book.id }}">
+                    <img class="card-img-top" src="{{env.BASE_URL}}{{ book.Image }}" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.title }}</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">
+        <pagination-controls  (pageChange)="p = $event"></pagination-controls>
+    </p>
+</div>
+<ngx-loading-x [show]="load"></ngx-loading-x>

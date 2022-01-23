@@ -1,0 +1,16 @@
+<header class="archive-header">
+    <h1 class="archive-title">Illustrations from<br><span class="taxname">{{ illustration.title }}</span></h1>
+</header>
+
+<ul class="card-list">
+    <li class="card" *ngFor="let item of illustration.illustrations; let i = index">
+        <a class="card-image" href="title/{{ illId }}/illustration/{{ i }}">
+            <img src="{{ item.iImage }}" alt="image" />
+        </a>
+        <a class="card-description" href="title/{{ illId }}/illustration/{{ i }}" >
+            <p>{{ item.ititle }}</p>
+        </a>
+    </li>
+</ul>
+
+<ngx-loading-x [show]="load"></ngx-loading-x>

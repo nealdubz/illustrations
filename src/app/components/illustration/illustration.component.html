@@ -1,0 +1,33 @@
+<header class="entry-header">
+    <h1 class="entry-title" itemprop="headline">{{ currentIllustration.ititle }}</h1>
+</header>
+<section class="downloads">
+    <h2>All Resolutions</h2>
+    <div class="d-inline" *ngFor="let item of currentIllustration.attributes[0].resolutions">
+        <a *ngIf="item.size != 'Edit Image'" class="hvr-sweep-to-bottom bordertop"
+            href="https://www.oldbookillustrations.com{{ item.image}}">{{ item.size}}</a>
+    </div>
+    <div class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <figure class="illustration clear" itemscope="" itemtype="https://schema.org/ImageObject">
+                        <img width="500" height="636"
+                            src="{{env.BASE_URL}}{{ currentIllustration.attributes[0].resolutions[0].image}}"
+                            class="attachment-full size-full wp-post-image"
+                            alt="A human-like figure floats on the sea with two large wings sticking out of the water">
+                    </figure>
+                </div>
+                <div class="col-md-5">
+                    <section class="info col span_1_of_3 artist-col"
+                        *ngFor="let item of currentIllustration.attributes[0].details">
+                        <h2 class="artist-deflist">{{ item.type }}</h2>
+                        <p *ngFor="let typeDetail of item.typeDetails">
+                             <span *ngIf="typeDetail.value != 'View record'"> <b>{{ typeDetail.title }} </b>  {{ typeDetail.value }} </span> 
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
